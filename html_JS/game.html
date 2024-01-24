@@ -9,9 +9,19 @@
     <script src="./assets/js/game.js"></script>
 </head>
 <body onresize="tamanhoDoPalco()">
+    <div class="painel">
+        <div class="vidas">
+            <img id="vida1" src="./assets/images/coracao_cheio.png" >
+            <img id="vida2" src="./assets/images/coracao_cheio.png" >
+            <img id="vida3" src="./assets/images/coracao_cheio.png" >
+        </div>
+        <div class="cronometro">Tempo restante: </div>
+    </div>
 
     <script>
-        imgRandomica()
+        setInterval(function() {
+            imgRandomica()
+        }, 2000)
     </script>
 </body>
 </html>

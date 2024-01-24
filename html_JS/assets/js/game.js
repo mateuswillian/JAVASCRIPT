@@ -11,6 +11,12 @@ function tamanhoDoPalco () {
 tamanhoDoPalco()
 
 function imgRandomica () {
+
+    //Remove mosquito
+    if ( document.getElementById('mosquito')) {
+    document.getElementById('mosquito').remove()
+        }
+
     let posicaox = Math.floor (Math.random() * largura) - 90
     let posicaoy = Math.floor (Math.random() * altura) - 90
     
@@ -27,6 +33,10 @@ function imgRandomica () {
     mosquito.style.left = posicaox + 'px'
     mosquito.style.top = posicaoy + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
+    mosquito.onclick = function () {
+        this.remove()
+    }
 
     document.body.appendChild(mosquito)
 }

@@ -15,6 +15,6 @@ function calcular(tipo, valor){
             let valorCampo = eval(document.getElementById('resultado').value)
             document.getElementById('resultado').value = valorCampo
         }
-    }
-    
+    }       
 }
+
