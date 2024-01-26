@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Pessoal - JS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/orçamento.css">
+    <script src="./assets/js/orçamento.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="./assets/images/logo.png" alt="Orçamento Pessoal" width="50" height="35">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggler="collapse" data-target="#navbarSupportedContend" aria-controls="nabbarSupporteContent" aria-expanded="false" aria-label="Toggle navigatiom">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContend">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a href="orçamento.html" class="nav-link">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orçamento_consulta.html" class="nav-link ">Consulta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4">Registro despesa</h1>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-2">
+                <select id="anos" class="form-control">
+                    <option value="">Selecione um Ano</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select id="meses" class="form-control">
+                    <option value="">Selecione um Mes</option>
+                    <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
+                    <option value="março">Março</option>
+                    <option value="abril">Abril</option>
+                    <option value="maio">Maio</option>
+                    <option value="junho">Junho</option>
+                    <option value="julho">Julho</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="setembro">Setembro</option>
+                    <option value="outubro">Outubro</option>
+                    <option value="novembro">Novembro</option>
+                    <option value="dezembro">Dezembro</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="informe o DIA" id="dia">
+            </div>
+            <div class="col-md-6">
+                <select id="tipo" class="form-control">
+                    <option value="">Selecione um tipo</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="educacao">Educação</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="saude">Saúde</option>
+                    <option value="transporte">Transporte</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" id="descricao" class="form-control" placeholder="Coloque uma descrição">
+            </div>
+            <div class="col-md-2">
+                <input type="text" id="valor" class="form-control" placeholder="Informe um valor">
+            </div>
+            <div class="col-md-2 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" onclick="">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- meu modal -->
+    <div class="modal fade" id="modalRegistraDespesa" tabindex="-1" role="dialog" aria-ledby="exempleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div id="modal_titulo_div">
+                <h5 class="modal-title" id="modal_titulo"></h5>
+                <button type="button" class="colse" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_conteudo"></div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" id="modal_btn">Voltar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
